@@ -1,102 +1,127 @@
 export const sentences = [
   {
-    text: "She don't like coffee very much.",
-    errors: [1], // "don't" should be "doesn't"
-    explanation: "Use 'doesn't' with third person singular (she, he, it)."
+    text: "Ella no le gustan el café.",
+    errors: [2], // "le" debería ser "les"
+    explanation: "Con 'gustar' se usa 'les' cuando el sujeto es plural o cuando nos referimos a 'ellas'."
   },
   {
-    text: "The book are on the table.",
-    errors: [2], // "are" should be "is"
-    explanation: "Use 'is' with singular subjects like 'book'."
+    text: "Los libros está en la mesa.",
+    errors: [2], // "está" debería ser "están"
+    explanation: "Con sujetos plurales como 'libros' se usa 'están', no 'está'."
   },
   {
-    text: "I have went to the store yesterday.",
-    errors: [2], // "went" should be "gone"
-    explanation: "Use 'gone' with 'have' (present perfect tense)."
+    text: "Yo he ido al mercado ayer.",
+    errors: [2], // "he ido" debería ser "fui"
+    explanation: "Con marcadores temporales como 'ayer' se usa el pretérito perfecto simple 'fui'."
   },
   {
-    text: "Him and me went to the movies.",
-    errors: [0, 2], // "Him" should be "He", "me" should be "I"
-    explanation: "Use subject pronouns 'He and I' when they are the subject of the sentence."
+    text: "Él y yo fuimos al cine.",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. 'Él y yo' requiere la conjugación 'fuimos'."
   },
   {
-    text: "There dog is very friendly.",
-    errors: [0], // "There" should be "Their"
-    explanation: "Use 'Their' to show possession, not 'There' (location)."
+    text: "Su perro es muy amigable.",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. La concordancia y el uso de posesivos es adecuado."
   },
   {
-    text: "I could of helped you with that.",
-    errors: [2], // "of" should be "have"
-    explanation: "Use 'could have' not 'could of'."
+    text: "Yo podría de haberte ayudado.",
+    errors: [3], // "de" debería eliminarse
+    explanation: "Se dice 'podría haber' o 'podría haberte', no 'podría de haber'."
   },
   {
-    text: "The children was playing outside.",
-    errors: [2], // "was" should be "were"
-    explanation: "Use 'were' with plural subjects like 'children'."
+    text: "Las niñas estaba jugando afuera.",
+    errors: [2], // "estaba" debería ser "estaban"
+    explanation: "Con sujetos plurales como 'niñas' se usa 'estaban', no 'estaba'."
   },
   {
-    text: "She walks to school everyday.",
-    errors: [4], // "everyday" should be "every day"
-    explanation: "Use 'every day' (two words) when you mean 'each day'."
+    text: "Ella camina a la escuela todos los días.",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. La concordancia y el tiempo verbal son adecuados."
   },
   {
-    text: "Between you and I, this is difficult.",
-    errors: [4], // "I" should be "me"
-    explanation: "Use 'me' after prepositions like 'between'."
+    text: "Entre tú y yo, esto es difícil.",
+    errors: [1], // "tú" debería ser "ti"
+    explanation: "Después de preposiciones como 'entre' se usa 'ti', no 'tú'."
   },
   {
-    text: "The team are playing good today.",
-    errors: [2, 4], // "are" should be "is", "good" should be "well"
-    explanation: "Team is singular (use 'is'), and use 'well' to describe how they play."
+    text: "El equipo están jugando bien hoy.",
+    errors: [2], // "están" debería ser "está"
+    explanation: "Sustantivos colectivos como 'equipo' son singulares, por lo que se usa 'está'."
   },
   {
-    text: "I seen that movie last week.",
-    errors: [1], // "seen" should be "saw"
-    explanation: "Use 'saw' for simple past tense, not 'seen'."
+    text: "Yo vi esa película la semana pasada.",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. El pretérito perfecto simple 'vi' es apropiado."
   },
   {
-    text: "Who's car is parked outside?",
-    errors: [0], // "Who's" should be "Whose"
-    explanation: "Use 'Whose' for possession, not 'Who's' (who is)."
+    text: "¿De quién carro está estacionado afuera?",
+    errors: [1], // "quién" debería ser "quién es el"
+    explanation: "Se debe decir '¿De quién es el carro?' para indicar posesión correctamente."
   },
   {
-    text: "The weather is more better today.",
-    errors: [4], // "more better" should be "better"
-    explanation: "Don't use 'more' with comparative adjectives like 'better'."
+    text: "El clima está más mejor hoy.",
+    errors: [3], // "más mejor" debería ser solo "mejor"
+    explanation: "No se usa 'más' con comparativos como 'mejor'. Solo se dice 'mejor'."
   },
   {
-    text: "Me and Sarah are going shopping.",
-    errors: [0], // "Me" should be "Sarah and I"
-    explanation: "Put the other person first and use 'I' as the subject."
+    text: "Yo y María vamos de compras.",
+    errors: [0], // "Yo y María" debería ser "María y yo"
+    explanation: "Por cortesía, se menciona primero a la otra persona: 'María y yo'."
   },
   {
-    text: "The cat laid on the warm blanket.",
-    errors: [2], // "laid" should be "lay"
-    explanation: "Use 'lay' for past tense of 'lie' (to recline)."
+    text: "El gato se acostó en la manta tibia.",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. El uso del pretérito y la concordancia son apropiados."
   },
   {
-    text: "I have less friends than before.",
-    errors: [2], // "less" should be "fewer"
-    explanation: "Use 'fewer' with countable nouns like 'friends'."
+    text: "Tengo menos amigos que antes.",
+    errors: [1], // "menos" debería ser "fewer" pero en español es correcto
+    explanation: "Esta oración es correcta. En español se usa 'menos' tanto para contables como incontables."
   },
   {
-    text: "The data shows interesting results.",
-    errors: [2], // "shows" should be "show"
-    explanation: "'Data' is plural, so use 'show' not 'shows'."
+    text: "Los datos muestra resultados interesantes.",
+    errors: [2], // "muestra" debería ser "muestran"
+    explanation: "'Datos' es plural, por lo que se usa 'muestran', no 'muestra'."
   },
   {
-    text: "Each student must bring their book.",
-    errors: [4], // "their" should be "his or her"
-    explanation: "'Each student' is singular, so use 'his or her' not 'their'."
+    text: "Cada estudiante debe traer su libro.",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. 'Cada estudiante' es singular, por lo que 'su' es apropiado."
   },
   {
-    text: "The reason is because I was late.",
-    errors: [3], // "because" should be "that"
-    explanation: "Use 'The reason is that...' not 'The reason is because...'."
+    text: "La razón es porque llegué tarde.",
+    errors: [3], // "porque" debería ser "que"
+    explanation: "Se dice 'La razón es que...' no 'La razón es porque...'."
   },
   {
-    text: "I should of called you earlier.",
-    errors: [2], // "of" should be "have"
-    explanation: "Use 'should have' not 'should of'."
+    text: "Yo debería de haberte llamado antes.",
+    errors: [2], // "de" debería eliminarse
+    explanation: "Se dice 'debería haber' o 'debería haberte', no 'debería de haber'."
+  },
+  {
+    text: "Mis padres está muy orgullosos de mí.",
+    errors: [2], // "está" debería ser "están"
+    explanation: "'Padres' es plural, por lo que se usa 'están', no 'está'."
+  },
+  {
+    text: "¿Dónde están las llaves del carro?",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. La concordancia plural es apropiada."
+  },
+  {
+    text: "Ella se puso la camisa roja.",
+    errors: [], // Esta oración es correcta
+    explanation: "Esta oración es correcta. El uso reflexivo y la concordancia son apropiados."
+  },
+  {
+    text: "Los estudiantes necesita más tiempo.",
+    errors: [2], // "necesita" debería ser "necesitan"
+    explanation: "'Estudiantes' es plural, por lo que se usa 'necesitan', no 'necesita'."
+  },
+  {
+    text: "Voy a la tienda por comprar leche.",
+    errors: [5], // "por" debería ser "para"
+    explanation: "Para expresar propósito se usa 'para', no 'por': 'para comprar leche'."
   }
 ]
