@@ -14,15 +14,15 @@ class App {
     app.innerHTML = `
       <div class="container">
         <header class="header">
-          <h1 class="title">Grammar Corrector</h1>
-          <p class="subtitle">Find and fix the grammar errors</p>
+          <h1 class="title">Corrector Gramatical</h1>
+          <p class="subtitle">Encuentra y corrige los errores gramaticales</p>
         </header>
         
         <div class="progress-section">
           <div class="stats">
             <div class="stat">
               <span class="stat-number" id="correct-count">0</span>
-              <span class="stat-label">Correct</span>
+              <span class="stat-label">Correctas</span>
             </div>
             <div class="stat">
               <span class="stat-number" id="total-count">0</span>
@@ -30,7 +30,7 @@ class App {
             </div>
             <div class="stat">
               <span class="stat-number" id="accuracy">0%</span>
-              <span class="stat-label">Accuracy</span>
+              <span class="stat-label">Precisión</span>
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@ class App {
         </div>
 
         <div class="controls">
-          <button class="btn btn-secondary" id="reset-btn">Reset Progress</button>
+          <button class="btn btn-secondary" id="reset-btn">Reiniciar Progreso</button>
         </div>
       </div>
     `
@@ -53,7 +53,7 @@ class App {
   setupEventListeners() {
     const resetBtn = document.getElementById('reset-btn')
     resetBtn.addEventListener('click', () => {
-      if (confirm('Are you sure you want to reset your progress?')) {
+      if (confirm('¿Estás seguro de que quieres reiniciar tu progreso?')) {
         this.progressTracker.reset()
         this.updateStats()
         this.grammarGame.reset()

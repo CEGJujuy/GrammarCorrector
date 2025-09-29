@@ -33,15 +33,15 @@ export class GrammarGame {
     
     this.gameContainer.innerHTML = `
       <div class="sentence-container">
-        <div class="instruction">Tap the words that contain grammar errors</div>
+        <div class="instruction">Toca las palabras que contengan errores gramaticales</div>
         <div class="sentence" id="sentence">
           ${words.map((word, index) => 
             `<span class="word" data-index="${index}">${word}</span>`
           ).join(' ')}
         </div>
         <div class="action-buttons">
-          <button class="btn btn-primary" id="check-btn">Check Answer</button>
-          <button class="btn btn-secondary" id="skip-btn">Skip</button>
+          <button class="btn btn-primary" id="check-btn">Verificar Respuesta</button>
+          <button class="btn btn-secondary" id="skip-btn">Saltar</button>
         </div>
         <div class="feedback" id="feedback"></div>
       </div>
@@ -130,7 +130,7 @@ export class GrammarGame {
       feedbackElement.innerHTML = `
         <div class="feedback-message success">
           <div class="feedback-icon">✓</div>
-          <div>Excellent! You found all the errors.</div>
+          <div>¡Excelente! Encontraste todos los errores.</div>
         </div>
       `
     } else {
@@ -139,19 +139,19 @@ export class GrammarGame {
         <div class="feedback-message error">
           <div class="feedback-icon">✗</div>
           <div>
-            <div>Not quite right. ${explanation}</div>
+            <div>No es correcto. ${explanation}</div>
             <div class="error-legend">
               <span class="legend-item">
                 <span class="legend-color correct-error"></span>
-                Correct selections
+                Selecciones correctas
               </span>
               <span class="legend-item">
                 <span class="legend-color missed-error"></span>
-                Missed errors
+                Errores perdidos
               </span>
               <span class="legend-item">
                 <span class="legend-color wrong-selection"></span>
-                Incorrect selections
+                Selecciones incorrectas
               </span>
             </div>
           </div>
